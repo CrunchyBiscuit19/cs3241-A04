@@ -1,0 +1,10 @@
+﻿/.vs/CS3241 Assignment 4 Bezier
+/include
+/lib
+*.sln
+*.vcxproj
+*.filters
+*.user
+*.exe
+/freeglut.dll
+/freeglut.lib
