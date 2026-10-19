@@ -1,3 +1,6 @@
+// Object drawn is a fish
+// The Bezier curve drawing is the Nurburgring 24Hr Layout
+
 // CS3241Lab4.cpp : Defines the entry point for the console application.
 // #include <cmath>
 #include <fstream>
@@ -265,7 +268,7 @@ int main(int argc, char** argv) {
     cout << "W: Write control points to \"savefile.txt\"" << endl;
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-    glutInitWindowSize(600, 600);
+    glutInitWindowSize(1200, 1200);
     glutInitWindowPosition(50, 50);
     glutCreateWindow("CS3241 Assignment 4");
     init();
