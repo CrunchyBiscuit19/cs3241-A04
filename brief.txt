@@ -1,0 +1,48 @@
+We will draw Bezier curves in this assignment, and some objects along them. (However, you cannot use any pre-defined library such as OpenGL  evaluators. You need to calculate the curve yourself.) You can add control points by left-clicking on the mouse. The points will be added to a list called “ptList[MAXPTNO]” and the variable “nPt” will record the number of points. Here are the tasks that you are supposed to do:
+
+    Control Line
+        In your skeleton program, when you click a new point on the screen, it will be displayed as a black point. Your first task is to draw the control lines (green ones) by joining them. This control lines are being toggled by pressing the key “L” and by the variable “displayControlLines”.
+    Clear All
+        By pressing the key “E”, you should erase all control points on the screen and start as new.
+    Bezier Curves
+
+        For every four points, draw a Bezier curve. So, the first 4 points, namely the 1st, 2nd, 3rd, and 4th points of your input, will form the first curve. Then the next curve is continuously formed by the 4th to 7th points (note that the 4th point is shared by two curves, so are the 7th, 10th … etc). The second curve is NOT formed by the 5th to 8th points instead. The number of straight line segments to approximate the curve is in the variable NLINESEGMENT. It is NOT advisable to use the divide-and-conquer paradigm (De Casteljau Algorithm) in this assignment. This will just make things harder for you.
+
+    C1 Continuity
+        By pressing the key “C” (Toggle the variable “C1Continuity”), you will modify the SECOND point of every curve (except the first one) and make them C1 Continuous. The new second control point will be displayed in red, and the original second control point will be dimed as grey. And this function should be reversible. And all the functions in this assignment should be working in BOTH modes of being C1 Continuous and not C1 Continuous.
+        image.png<-- toggle --> image.png
+    Tangent Vectors
+
+        Draw the tangent vectors by pressing the key “T” (Toggle the variable “displayTangentVectors”). The number of tangent vectors you need to draw is in the variable NOBJECTONCURVE (Not NLINESEGMENT). There is already a function drawRightArrow() to draw an arrow for you.
+
+    Draw Objects
+        At the same manner of the tangent vectors, draw NOBJECTONCURVE copies of an object of your own creation along the curve (Toggled by “O” and the variable “displayObjects”). You can reuse your Assignment 1 result. The objects should be drawn on the reference frame with the tangent and the normal vectors on the curve. In the sample program, the object is simply ONE circle with two lines on the north and south poles of the circle. By repeating it on the curve, it looks like a worm.
+    Create A Drawing with Bezier Curves
+        Create one beautiful figure (with or without the objects) and submit “savefile.txt” together with your submission. (There are two functions “R” and “W” provided for you to read and write your current control points into a file called “savefile.txt”.)
+
+Submission
+
+Submit both of your main.cpp and your save.txt
+
+Grading
+Grading
+
+We will grade how innovative and beautiful your objects are as well as how compact and clever your program is. E.g., the examples above are only about ten lines of C++ code. However, please do NOT create objects that are associated with racism, pornography or violence.
+
+In this assignment, you cannot use any predetermined 3D object drawing function, e.g. drawSolidSphere() from the GLUT library, to help you create an object. You must specify all vertices and normals of the object by yourself.
+Rubrics:
+
+    10% You added new meaningful items into your code and it compiles smoothly
+    5% Control Lines are drawn correctly
+    5% Clear All works perfectly with repeated usage
+    20% Your Bezier Curves work perfectly
+    20% Your toggle with C1 continuity works perfectly
+    20% Your tangent vectors display correctly.
+    20% for subjective emotional artistic appreciation of your savefile
+        0% It doesn’t make any sense
+        5% Ok
+        10% Good looking (for > 80% of students)
+        15% Very good, exceptional
+        20% The best 3 students
+
+If you have anything extra that you want your graders to notice, please write that in the top portion at your code
